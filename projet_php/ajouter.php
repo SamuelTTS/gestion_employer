@@ -1,12 +1,5 @@
 <?php
-$host = "localhost";
-$db = "gestion_employer";
-$user = "root";
-$password = "";
-
-// Connexion à la base de données
-$connexion = new PDO("mysql:host=$host;dbname=$db;charset=utf8", $user, $password);
-$connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+require 'database_connect.php';
 
 if (isset($_POST["ajouter"])) {
     $nom = $_POST["nom"];

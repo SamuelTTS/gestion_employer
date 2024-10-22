@@ -1,20 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
-    <title>GESTION DU PERSONNEL</title>
+    <title> Gestion du Personnel</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            background: url('images/businessman-2753324.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(40, 122, 61, 0.6);
+            z-index: 1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            animation: fadeIn 2.5s ease-in-out;
+        }
+
+        .login-btn {
+            background-color: #000000;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            animation: fadeIn 3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #ffffff;
+            color: rgb(30, 110, 84);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            p {
+                font-size: 1.2em;
+            }
+
+            .login-btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div>
-        <h1>GESTION DU PERSONNEL</h1>
-        <a href="connexion.php"><input type="submit" value="CONNEXION"></a>
 
+    <div class="overlay"></div>
+
+    <div class="content">
+        <h1>Bienvenue à la Gestion du Personnel</h1>
+        <p>Votre plateforme pour gérer efficacement les informations de vos employés.</p>
+        <a href="connexion.php" class="login-btn">Accéder à l'espace administrateur</a>
     </div>
+
 </body>
 
 </html>

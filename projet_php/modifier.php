@@ -1,8 +1,5 @@
 <?php
-$host = "localhost";
-$db = "gestion_employer";
-$user = "root";
-$password = "";
+require 'database_connect.php';
 
 // Create a PDO connection
 try {
@@ -66,35 +63,45 @@ if (isset($_POST['modifier'])) {
 </head>
 
 <body>
-    <form action="" method="POST">
+    <div class="form">
+        <a href="gestion.php" class="back_btn"><img src="images/back.png"> Retour</a>
+        <form action="" method="POST">
 
-        <label for="nom">Nom</label>
-        <input type="text" name="nom" id="nom" placeholder="nom de l'employe" value="<?php echo $rows["nom"] ?>" required>
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" placeholder="nom de l'employe" value="<?php echo $rows["nom"] ?>" required>
 
-        <label for="prenom">Prénom</label>
-        <input type="text" name="prenom" id="prenom" placeholder="prenom de l'employe" value="<?php echo $rows["prenom"] ?>" required>
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" placeholder="prenom de l'employe"
+                value="<?php echo $rows["prenom"] ?>" required>
 
-        <label for="date">Date de naissance</label>
-        <input type="date" name="date" id="date" placeholder="date de naissance" value="<?php echo $rows["date"] ?>" required>
+            <label for="date">Date de naissance</label>
+            <input type="date" name="date" id="date" placeholder="date de naissance" value="<?php echo $rows["date"] ?>"
+                required>
 
-        <label for="adresse">Adresse</label>
-        <input type="text" name="adresse" id="adresse" placeholder="adresse de l'employe" value="<?php echo $rows["adresse"] ?>" required>
+            <label for="adresse">Adresse</label>
+            <input type="text" name="adresse" id="adresse" placeholder="adresse de l'employe"
+                value="<?php echo $rows["adresse"] ?>" required>
 
-        <label for="telephone">Tel</label>
-        <input type="tel" name="tel" id="tel" placeholder="numero de telephone" value="<?php echo $rows["tel"] ?> " required>
+            <label for="telephone">Tel</label>
+            <input type="tel" name="tel" id="tel" placeholder="numero de telephone" value="<?php echo $rows["tel"] ?> "
+                required>
 
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="email de l'employe" value="<?php echo $rows["email"] ?>" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="email de l'employe" value="<?php echo $rows["email"] ?>"
+                required>
 
-        <label for="fonction">Fonction</label>
-        <input type="text" name="fonction" id="fonction" placeholder="fonction de l'employe" value="<?php echo $rows["fonction"] ?>" required>
+            <label for="fonction">Fonction</label>
+            <input type="text" name="fonction" id="fonction" placeholder="fonction de l'employe"
+                value="<?php echo $rows["fonction"] ?>" required>
 
-        <label for="salaire">Salaire</label>
-        <input type="text" name="salaire" id="salaire" placeholder="salaire de l'employe" value="<?php echo $rows["salaire"] ?>" required>
+            <label for="salaire">Salaire</label>
+            <input type="text" name="salaire" id="salaire" placeholder="salaire de l'employe"
+                value="<?php echo $rows["salaire"] ?>" required>
 
-        <input type="submit" name="modifier" id="modifier" value="modifier">
+            <input type="submit" name="modifier" id="modifier" value="modifier">
 
-    </form>
+        </form>
+    </div>
 </body>
 
 </html>

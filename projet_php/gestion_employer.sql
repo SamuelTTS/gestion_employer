@@ -37,8 +37,7 @@ CREATE TABLE `personnel` (
   `email` varchar(50) NOT NULL,
   `fonction` varchar(50) NOT NULL,
   `salaire` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
+) ;
 --
 -- Déchargement des données de la table `personnel`
 --
